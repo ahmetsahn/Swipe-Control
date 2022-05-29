@@ -37,8 +37,10 @@ public class PlayerController : MonoBehaviour
                 // Camera.main.ScreenToViewportPoint(touch.position) takes a value between 0 and 1
                 // When the player is at 0, Camera.main.ScreenToViewportPoint(touch.position) is at 0.5
                 // So 0.5 is subtracted
-                // The player can move between -4 and 4 on the x-axis.Difference 8.So it is multiplied by 8.
-
+                // The player can move between -4 and 4 on the x-axis. Difference 8. So it is multiplied by 8.
+                // You need to arrange these numbers according to yourself.
+                // Example : The range your player can move on the x-axis is -5 to 5. Difference 10. So it is multiplied by 10.
+               
                  transform.position = Vector3.Lerp(transform.position, lastPos, Time.deltaTime * 10);
             }
 
